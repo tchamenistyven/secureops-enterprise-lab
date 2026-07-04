@@ -145,3 +145,37 @@ Statut :
 En attente de validation de l'étape 0.3.2.
 
 
+
+### Étape 0.3.3 — Création et publication du dépôt GitHub
+
+Date et heure : 04/07/2026 14:33:44
+
+Actions réalisées :
+
+- vérification finale du dépôt local ;
+- vérification des auteurs et adresses des commits ;
+- vérification de l'absence de données sensibles ;
+- création du dépôt GitHub public ;
+- configuration du remote `origin` ;
+- publication de la branche `main` ;
+- vérification de la synchronisation entre le dépôt local et GitHub ;
+- ajout de la description et des sujets techniques ;
+- vérification du dépôt dans le navigateur.
+
+Résultats :
+
+- dépôt : `tchamenistyven/secureops-enterprise-lab` ;
+- visibilité : publique ;
+- branche par défaut : `main` ;
+- remote : `origin` ;
+- URL : https://github.com/tchamenistyven/secureops-enterprise-lab ;
+- fichiers sensibles publiés : Non ;
+- push forcé utilisé : Non.
+
+Rapport créé :
+
+`docs/publication-github.md`
+
+Statut :
+
+En attente de validation de l'étape 0.3.3.
