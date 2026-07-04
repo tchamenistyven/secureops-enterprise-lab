@@ -70,9 +70,10 @@ Nouveau: 66c55ae | 66c55aeb2044fd56f9e6fd8fbe6b13c4d98d3ef2 | Styven Tchameni <2
 - Authentification GitHub CLI effectuée via navigateur, sans mot de passe ni token transmis dans le chat.
 - Adresse Git locale remplacée par l'adresse GitHub noreply uniquement dans .git/config.
 - Historique local réécrit avant tout push avec git rebase --root --exec reset-author.
-- Branche locale ackup-before-email-privacy supprimée après validation de main.
+- Branche locale backup-before-email-privacy supprimée après validation de main.
 
 ## Statut
 
 En attente de validation de l'étape 0.3.2.
+
 
