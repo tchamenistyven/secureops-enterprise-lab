@@ -51,10 +51,24 @@ Aucun fichier suspect détecté.
 ## Premier commit
 
 - message : `chore: initialize SecureOps Enterprise Lab`
-- identifiant du commit : sera renseigné après création du commit
-- nombre de fichiers suivis : sera renseigné après création du commit
+- identifiant du commit : `515704a`
+- nombre de fichiers suivis : 21
+
+## Commits créés pendant l'étape
+
+- 515704a chore: initialize SecureOps Enterprise Lab
+
+## Historique Git après premier commit
+
+`text
+515704a (HEAD -> main) chore: initialize SecureOps Enterprise Lab
+`
 
 ## Dépôt distant
+
+`text
+(aucun remote configuré)
+`
 
 Aucun dépôt GitHub distant n'a encore été configuré.
 
