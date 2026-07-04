@@ -20,7 +20,7 @@ Le projet permettra de mettre en œuvre :
 
 ## État du projet
 
-Phase actuelle : conception et validation de l'architecture initiale.
+Phase actuelle : réseaux virtuels VMware configurés, préparation du déploiement de pfSense.
 
 ## Systèmes prévus
 
@@ -55,8 +55,24 @@ Documents d'architecture :
 - [Présentation globale](docs/architecture-overview.md)
 - [Inventaire des machines](docs/inventaire-machines.md)
 - [Plan d'adressage IP](docs/plan-adressage.md)
+- [Réseaux virtuels VMware](docs/reseaux-vmware.md)
 - [Matrice des flux réseau](docs/matrice-flux-reseau.md)
 - [Schéma logique](diagrams/architecture-logique.md)
 - [Schéma réseau](diagrams/architecture-reseau.md)
 - [Flux utilisateur vers l'application](diagrams/flux-application.md)
 - [Flux de basculement automatique](diagrams/flux-failover.md)
+
+## Réseaux VMware configurés
+
+Les réseaux virtuels VMware de la phase 1 sont configurés et documentés. Aucune machine virtuelle n'est créée à ce stade.
+
+| Réseau | Zone | Sous-réseau | DHCP VMware | Adaptateur hôte |
+| --- | --- | --- | --- | --- |
+| `VMnet8` | WAN NAT | `192.168.200.0/24` | Activé | Activé |
+| `VMnet2` | Administration | `192.168.10.0/24` | Désactivé | Activé |
+| `VMnet3` | Serveurs | `192.168.20.0/24` | Désactivé | Désactivé |
+| `VMnet4` | Utilisateurs | `192.168.30.0/24` | Désactivé | Désactivé |
+| `VMnet5` | DMZ | `192.168.40.0/24` | Désactivé | Désactivé |
+| `VMnet6` | Sauvegarde | `192.168.50.0/24` | Désactivé | Désactivé |
+
+Le détail est disponible dans [Réseaux virtuels VMware](docs/reseaux-vmware.md).

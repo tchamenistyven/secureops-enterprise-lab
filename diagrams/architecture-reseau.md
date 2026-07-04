@@ -1,16 +1,17 @@
-# Schéma réseau cible
+# Schéma réseau VMware
 
-Ce schéma décrit la segmentation VMware prévue. Aucun réseau VMnet n'a encore été créé ou modifié dans VMware.
+Ce schéma décrit la segmentation VMware configurée pour SecureOps Enterprise Lab. Les machines virtuelles ne sont pas encore créées et pfSense n'est pas encore installé.
 
 ```mermaid
 flowchart TB
     INTERNET[Internet]
-    NAT[VMnet8<br/>NAT VMware<br/>Adressage VMware]
+    NAT[VMnet8<br/>NAT VMware<br/>192.168.200.0/24]
     FW[fw-01<br/>pfSense<br/>Passerelles .1]
 
     INTERNET --> NAT --> FW
 
     subgraph ADMIN["Administration — VMnet2 — 192.168.10.0/24 — GW 192.168.10.1"]
+        HOST[PC hôte Windows<br/>VMware Network Adapter VMnet2<br/>192.168.10.254]
         OPS[ops-01<br/>192.168.10.10]
     end
 

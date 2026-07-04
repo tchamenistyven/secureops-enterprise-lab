@@ -10,7 +10,7 @@ Les adresses indiquées sont des valeurs de conception. Elles seront appliquées
 
 | Réseau VMware | Zone | Sous-réseau | Passerelle |
 | --- | --- | --- | --- |
-| `VMnet8` | WAN VMware NAT | Attribué par VMware | Attribuée par VMware |
+| `VMnet8` | WAN VMware NAT | `192.168.200.0/24` | DHCP VMware NAT |
 | `VMnet2` | Administration | `192.168.10.0/24` | `192.168.10.1` |
 | `VMnet3` | Serveurs | `192.168.20.0/24` | `192.168.20.1` |
 | `VMnet4` | Utilisateurs | `192.168.30.0/24` | `192.168.30.1` |
@@ -21,7 +21,7 @@ Les adresses indiquées sont des valeurs de conception. Elles seront appliquées
 
 | Interface ou zone | Réseau VMware | Adresse prévue |
 | --- | --- | --- |
-| WAN | `VMnet8` | DHCP VMware NAT |
+| WAN | `VMnet8` | DHCP VMware sur `192.168.200.0/24` |
 | Administration | `VMnet2` | `192.168.10.1/24` |
 | Serveurs | `VMnet3` | `192.168.20.1/24` |
 | Utilisateurs | `VMnet4` | `192.168.30.1/24` |
@@ -40,13 +40,21 @@ Les adresses indiquées sont des valeurs de conception. Elles seront appliquées
 | `lb-01` | DMZ | `192.168.40.10/24` |
 | `backup-01` | Sauvegarde | `192.168.50.10/24` |
 
+## Adresse du PC hôte Windows
+
+| Adaptateur Windows | Réseau VMware | Adresse | Masque | Passerelle | DNS |
+| --- | --- | --- | --- | --- | --- |
+| `VMware Network Adapter VMnet2` | `VMnet2` Administration | `192.168.10.254` | `255.255.255.0` | aucune | aucun |
+
+Cette adresse permettra au PC hôte Windows d'administrer pfSense et les équipements explicitement autorisés dans la zone Administration.
+
 ## Plage DHCP utilisateurs
 
 | Zone | Machine concernée | Plage prévue |
 | --- | --- | --- |
 | Utilisateurs | `client-01` et futurs postes clients | `192.168.30.100-192.168.30.199` |
 
-Le service DHCP sera prévu sur `dc-01` pour la zone Utilisateurs. La configuration exacte sera validée lors de l'installation de Windows Server et de pfSense.
+pfSense fournira temporairement le service DHCP pour la zone Utilisateurs. Le service DHCP Windows Server sera ajouté plus tard sur `dc-01`, lorsque le domaine Active Directory sera déployé. La configuration exacte sera validée lors de l'installation de pfSense puis de Windows Server.
 
 ## Serveur DNS
 

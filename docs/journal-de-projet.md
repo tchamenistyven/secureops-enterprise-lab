@@ -215,3 +215,43 @@ L'architecture cible est documentée. Aucune machine virtuelle ni aucun réseau 
 Statut :
 
 En attente de validation de l'étape 0.5.
+
+
+### Phase 1 — Création des réseaux VMware
+
+Date et heure : 04/07/2026 22:19:12
+
+#### Étape 1.1 — Analyse des réseaux existants
+
+Résultats :
+
+- VMnet0 détecté en mode Bridged ;
+- VMnet1 détecté en mode Host-only ;
+- VMnet8 détecté initialement en mode NAT sur 192.168.30.0/24 ;
+- conflit identifié avec le futur réseau Utilisateurs.
+
+#### Étape 1.2 — Création des réseaux internes
+
+Actions réalisées :
+
+- déplacement de VMnet8 vers 192.168.200.0/24 ;
+- création de VMnet2 pour l'Administration ;
+- création de VMnet3 pour les Serveurs ;
+- création de VMnet4 pour les Utilisateurs ;
+- création de VMnet5 pour la DMZ ;
+- création de VMnet6 pour les Sauvegardes ;
+- désactivation du DHCP VMware sur VMnet2 à VMnet6 ;
+- désactivation des adaptateurs hôtes sur VMnet3 à VMnet6 ;
+- configuration de l'adaptateur Windows VMnet2 en 192.168.10.254/24.
+
+Résultat :
+
+Les réseaux virtuels nécessaires à l'architecture ont été créés. Le routage sera assuré plus tard par pfSense.
+
+Document créé :
+
+`docs/reseaux-vmware.md`
+
+Statut :
+
+En attente de validation finale de la phase 1.
