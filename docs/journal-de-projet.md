@@ -179,3 +179,39 @@ Rapport créé :
 Statut :
 
 En attente de validation de l'étape 0.3.3.
+
+
+### Étape 0.5 — Conception de l'architecture initiale
+
+Date et heure : 04/07/2026 15:10:46
+
+Actions réalisées :
+
+- définition des machines virtuelles ;
+- définition des rôles et des services ;
+- définition des ressources prévues ;
+- définition des zones réseau ;
+- création du plan d'adressage ;
+- définition des cartes réseau ;
+- création de la matrice initiale des flux ;
+- création des schémas Mermaid ;
+- mise à jour du README.
+
+Documents créés ou complétés :
+
+- `docs/architecture-overview.md` ;
+- `docs/inventaire-machines.md` ;
+- `docs/plan-adressage.md` ;
+- `docs/matrice-flux-reseau.md` ;
+- `diagrams/architecture-logique.md` ;
+- `diagrams/architecture-reseau.md` ;
+- `diagrams/flux-application.md` ;
+- `diagrams/flux-failover.md`.
+
+Résultat :
+
+L'architecture cible est documentée. Aucune machine virtuelle ni aucun réseau VMware n'a encore été créé.
+
+Statut :
+
+En attente de validation de l'étape 0.5.
