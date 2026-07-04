@@ -111,3 +111,36 @@ Aucun dépôt GitHub distant n'a encore été configuré.
 Statut :
 
 En attente de validation de l'étape 0.3.1.
+
+### Étape 0.3.2 — Préparation sécurisée de GitHub
+
+Date et heure : 04/07/2026 14:20:44
+
+Actions réalisées :
+
+- installation ou vérification de GitHub CLI ;
+- authentification sécurisée avec le navigateur ;
+- identification du compte GitHub ;
+- activation ou vérification de la confidentialité des e-mails ;
+- création de l'adresse GitHub `noreply` ;
+- modification de l'adresse Git locale ;
+- réécriture de l'historique local avant publication ;
+- vérification des métadonnées des commits.
+
+Résultats :
+
+- compte GitHub : tchamenistyven ;
+- GitHub CLI : gh version 2.96.0 (2026-07-02) ;
+- adresse de commit : 239176593+tchamenistyven@users.noreply.github.com ;
+- ancienne adresse présente dans `main` : Non ;
+- remote configuré : Non ;
+- push effectué : Non.
+
+Rapport créé :
+
+`docs/preparation-github.md`
+
+Statut :
+
+En attente de validation de l'étape 0.3.2.
+
