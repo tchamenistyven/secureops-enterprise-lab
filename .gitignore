@@ -1,0 +1,54 @@
+﻿# Fichiers contenant des secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+secrets/
+credentials/
+
+# Sauvegardes
+*.backup
+*.bak
+*.zip
+*.tar
+*.tar.gz
+
+# Machines virtuelles
+*.vmdk
+*.vmem
+*.vmss
+*.vmsn
+*.nvram
+*.lck
+*.iso
+
+# Fichiers temporaires
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Visual Studio Code
+.vscode/
+
+# Règles complémentaires SecureOps 0.3.1
+# Secrets et variables d'environnement
+*.crt
+*.token
+# Sauvegardes et archives
+*.7z
+# Machines virtuelles et images
+*.ova
+*.ovf
+# Journaux et fichiers temporaires
+# Éditeurs
+.idea/
